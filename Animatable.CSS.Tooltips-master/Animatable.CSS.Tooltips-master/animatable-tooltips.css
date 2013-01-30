@@ -1,0 +1,537 @@
+/*====================================================
+Animatable CSS Tooltips by Adam Whitcroft
+https://github.com/AdamWhitcroft/Animatable.CSS.Tooltips
+====================================================*/
+/*==================================================*/
+/*  $Tooltip Setup (mostly boring)                  */
+/*==================================================*/
+.tip-trigger {
+	position:relative;
+}
+.tip-trigger span {
+	display:none;
+	position:absolute;
+	top:-35px;
+	font-weight:bold;
+	font-size: 0.75em;
+	color:#fff;
+	padding:5px 8px;
+	border: 1px solid #454544;
+	background-image: -webkit-linear-gradient(bottom,#181818 53%,#323232 57%);
+	background-image: -moz-linear-gradient(bottom,#181818 53%,#323232 57%);
+	background-image: linear-gradient(bottom,#181818 53%,#323232 57%);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	height:18px;
+	line-height:18px;
+	white-space:nowrap;
+	word-wrap:normal;
+	z-index:9;
+}
+.tip-trigger span:before {
+	content:'';
+	display:none;
+	border:5px solid #181818;
+	border-top-color:#181818;
+	border-right-color:transparent;
+	border-bottom-color:transparent;
+	border-left-color:transparent;
+	position:absolute;
+	left:10px;
+	top:28px;
+	z-index:8;
+	font-size:0;
+	line-height:0;
+	width:0;
+	height:0;	
+}
+.tip-trigger:hover span,
+.tip-trigger:hover span:before {
+	display:block;
+	display:cursor;
+}
+/*==================================================*/
+/*  $Classed Tooltips                               */
+/*==================================================*/
+/* tipFade */
+.tip-trigger.tipFade span {
+	-webkit-animation: tipFade .5s ease-out;	
+	-moz-animation: tipFade .5s ease-out;	
+	animation: tipFade .5s ease-out;	
+}
+/* tipFadeDown */
+.tip-trigger.tipFadeDown span {
+	-webkit-animation: tipFadeDown .5s ease-out;	
+	-moz-animation: tipFadeDown .5s ease-out;	
+	animation: tipFadeDown .5s ease-out;	
+}
+/* tipFadeUp */
+.tip-trigger.tipFadeUp span {
+	-webkit-animation: tipFadeUp .5s ease-out;	
+	-moz-animation: tipFadeUp .5s ease-out;	
+	animation: tipFadeUp .5s ease-out;	
+}
+/* tipFadeLeft */
+.tip-trigger.tipFadeLeft span {
+	-webkit-animation: tipFadeLeft .5s ease-out;	
+	-moz-animation: tipFadeLeft .5s ease-out;	
+	animation: tipFadeLeft .5s ease-out;	
+}
+/* tipFadeRight */
+.tip-trigger.tipFadeRight span {
+	-webkit-animation: tipFadeRight .5s ease-out;	
+	-moz-animation: tipFadeRight .5s ease-out;	
+	animation: tipFadeRight .5s ease-out;	
+}
+/* tipBounceDown */
+.tip-trigger.tipBounceDown span {
+	-webkit-animation: tipBounceDown .5s cubic-bezier(1, 0, .78, 1);	
+	-moz-animation: tipBounceDown .5s cubic-bezier(1, 0, .78, 1);	
+	animation: tipBounceDown .5s cubic-bezier(1, 0, .78, 1);	
+}
+/* tipBounceLeft */
+.tip-trigger.tipBounceLeft span {
+	-webkit-animation: tipBounceLeft .5s cubic-bezier(1, 0, .78, 1);	
+	-moz-animation: tipBounceLeft .5s cubic-bezier(1, 0, .78, 1);	
+	animation: tipBounceLeft .5s cubic-bezier(1, 0, .78, 1);	
+}
+/* tipBounceRight */
+.tip-trigger.tipBounceRight span {
+	-webkit-animation: tipBounceRight .5s cubic-bezier(1, 0, .78, 1);	
+	-moz-animation: tipBounceRight .5s cubic-bezier(1, 0, .78, 1);	
+	animation: tipBounceRight .5s cubic-bezier(1, 0, .78, 1);	
+}
+/* tipBounceIn */
+.tip-trigger.tipBounceIn span {
+	-webkit-animation: tipBounceIn .5s cubic-bezier(1, 0, .78, 1);	
+	-moz-animation: tipBounceIn .5s cubic-bezier(1, 0, .78, 1);	
+	animation: tipBounceIn .5s cubic-bezier(1, 0, .78, 1);	
+}
+/* tipZoomIn */
+.tip-trigger.tipZoomIn span {
+	-webkit-animation: tipZoomIn .5s cubic-bezier(1, 0, .78, 1);	
+	-moz-animation: tipZoomIn .5s cubic-bezier(1, 0, .78, 1);	
+	animation: tipZoomIn .5s cubic-bezier(1, 0, .78, 1);	
+}
+/* tipZoomOut */
+.tip-trigger.tipZoomOut span {
+	-webkit-animation: tipZoomOut .5s cubic-bezier(1, 0, .78, 1);	
+	-moz-animation: tipZoomOut .5s cubic-bezier(1, 0, .78, 1);	
+	animation: tipZoomOut .5s cubic-bezier(1, 0, .78, 1);	
+}
+/* tipSpinIn */
+.tip-trigger.tipSpinIn span {
+	-webkit-animation: tipSpinIn .5s ease;	
+	-moz-animation: tipSpinIn .5s ease;	
+	animation: tipSpinIn .5s ease;	
+}
+/*==================================================*/
+/*  $Tooltip Animations (mostly awesome)            */
+/*==================================================*/
+/* tipFade */
+@-webkit-keyframes tipFade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+@-moz-keyframes tipFade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+@keyframes tipFade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+/* tipFadeDown */
+@-webkit-keyframes tipFadeDown {
+	0% {
+		opacity:0;
+		-webkit-transform:translateY(-10px);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:translateY(0);
+	}
+}
+@-moz-keyframes tipFadeDown {
+	0% {
+		opacity:0;
+		-moz-transform:translateY(-10px);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:translateY(0);
+	}
+}
+@keyframes tipFadeDown {
+	0% {
+		opacity:0;
+		transform:translateY(-10px);
+	}
+	100% {
+		opacity:1;
+		transform:translateY(0);
+	}
+}
+/* tipFadeUp */
+@-webkit-keyframes tipFadeUp {
+	0% {
+		opacity:0;
+		-webkit-transform:translateY(10px);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:translateY(0);
+	}
+}
+@-moz-keyframes tipFadeUp {
+	0% {
+		opacity:0;
+		-moz-transform:translateY(10px);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:translateY(0);
+	}
+}
+@keyframes tipFadeUp {
+	0% {
+		opacity:0;
+		transform:translateY(10px);
+	}
+	100% {
+		opacity:1;
+		transform:translateY(0);
+	}
+}
+/* tipFadeLeft */
+@-webkit-keyframes tipFadeLeft {
+	0% {
+		opacity:0;
+		-webkit-transform:translateX(-10px);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:translateX(0);
+	}
+}
+@-moz-keyframes tipFadeLeft {
+	0% {
+		opacity:0;
+		-moz-transform:translateX(-10px);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:translateX(0);
+	}
+}
+@keyframes tipFadeLeft {
+	0% {
+		opacity:0;
+		transform:translateX(-10px);
+	}
+	100% {
+		opacity:1;
+		transform:translateX(0);
+	}
+}
+/* tipFadeRight */
+@-webkit-keyframes tipFadeRight {
+	0% {
+		opacity:0;
+		-webkit-transform:translateX(10px);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:translateX(0);
+	}
+}
+@-moz-keyframes tipFadeRight {
+	0% {
+		opacity:0;
+		-moz-transform:translateX(10px);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:translateX(0);
+	}
+}
+@keyframes tipFadeRight {
+	0% {
+		opacity:0;
+		transform:translateX(10px);
+	}
+	100% {
+		opacity:1;
+		transform:translateX(0);
+	}
+}
+/* tipBounceDown */
+@-webkit-keyframes tipBounceDown {
+	0% {
+		opacity:0;
+		-webkit-transform:translateY(-40px);
+	}
+	80% {
+		-webkit-transform:translateY(0);
+	}
+	90% {
+		-webkit-transform:translateY(-10px);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:translateY(0);
+	}	
+}
+@-moz-keyframes tipBounceDown {
+	0% {
+		opacity:0;
+		-moz-transform:translateY(-40px);
+	}
+	80% {
+		-moz-transform:translateY(0);
+	}
+	90% {
+		-moz-transform:translateY(-10px);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:translateY(0);
+	}	
+}
+@keyframes tipBounceDown {
+	0% {
+		opacity:0;
+		transform:translateY(-40px);
+	}
+	80% {
+		transform:translateY(0);
+	}
+	90% {
+		transform:translateY(-10px);
+	}
+	100% {
+		opacity:1;
+		transform:translateY(0);
+	}	
+}
+/* tipBounceLeft */
+@-webkit-keyframes tipBounceLeft {
+	0% {
+		opacity:0;
+		-webkit-transform:translateX(-40px);
+	}
+	80% {
+		-webkit-transform:translateX(0);
+	}
+	90% {
+		-webkit-transform:translateX(-10px);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:translateX(0);
+	}	
+}
+@-moz-keyframes tipBounceLeft {
+	0% {
+		opacity:0;
+		-moz-transform:translateY(-40px);
+	}
+	80% {
+		-moz-transform:translateX(0);
+	}
+	90% {
+		-moz-transform:translateY(-10px);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:translateY(0);
+	}	
+}
+@keyframes tipBounceLeft {
+	0% {
+		opacity:0;
+		transform:translateY(-40px);
+	}
+	80% {
+		transform:translateX(0);
+	}
+	90% {
+		transform:translateY(-10px);
+	}
+	100% {
+		opacity:1;
+		transform:translateY(0);
+	}	
+}
+/* tipBounceRight */
+@-webkit-keyframes tipBounceRight {
+	0% {
+		opacity:0;
+		-webkit-transform:translateX(40px);
+	}
+	80% {
+		-webkit-transform:translateX(0);
+	}
+	90% {
+		-webkit-transform:translateX(10px);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:translateX(0);
+	}	
+}
+@-moz-keyframes tipBounceRight {
+	0% {
+		opacity:0;
+		-moz-transform:translateY(40px);
+	}
+	80% {
+		-moz-transform:translateX(0);
+	}
+	90% {
+		-moz-transform:translateY(10px);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:translateY(0);
+	}	
+}
+@keyframes tipBounceRight {
+	0% {
+		opacity:0;
+		transform:translateY(40px);
+	}
+	80% {
+		transform:translateX(0);
+	}
+	90% {
+		transform:translateY(10px);
+	}
+	100% {
+		opacity:1;
+		transform:translateY(0);
+	}	
+}
+/* tipBounceIn */
+@-webkit-keyframes tipBounceIn {
+	0% {
+		opacity:0;
+		-webkit-transform:scale(0.6);
+	}
+	80% {
+		-webkit-transform:scale(1.2);
+	}
+	90% {
+		-webkit-transform:scale(0.9);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:scale(1);
+	}	
+}
+/* tipZoomIn */
+@-webkit-keyframes tipZoomIn {
+	0% {
+		opacity:0;
+		-webkit-transform:scale(0.6);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:scale(1);
+	}
+}
+@-moz-keyframes tipZoomIn {
+	0% {
+		opacity:0;
+		-moz-transform:scale(0.6);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:scale(1);
+	}
+}
+@keyframes tipZoomIn {
+	0% {
+		opacity:0;
+		transform:scale(0.6);
+	}
+	100% {
+		opacity:1;
+		transform:scale(1);
+	}
+}
+/* tipZoomOut */
+@-webkit-keyframes tipZoomOut {
+	0% {
+		opacity:0;
+		-webkit-transform:scale(1.4);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:scale(1);
+	}
+}
+@-moz-keyframes tipZoomOut {
+	0% {
+		opacity:0;
+		-moz-transform:scale(1.4);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:scale(1);
+	}
+}
+@keyframes tipZoomOut {
+	0% {
+		opacity:0;
+		transform:scale(1.4);
+	}
+	100% {
+		opacity:1;
+		transform:scale(1);
+	}
+}
+/* tipSpinIn */
+@-webkit-keyframes tipSpinIn {
+	0% {
+		opacity:0;
+		-webkit-transform:rotate(-270deg) scale(0.8);
+	}
+	100% {
+		opacity:1;
+		-webkit-transform:rotate(0) scale(1);		
+	}
+}
+@-moz-keyframes tipSpinIn {
+	0% {
+		opacity:0;
+		-moz-transform:rotate(-270deg) scale(0.8);
+	}
+	100% {
+		opacity:1;
+		-moz-transform:rotate(0) scale(1);		
+	}
+}
+@keyframes tipSpinIn {
+	0% {
+		opacity:0;
+		transform:rotate(-270deg) scale(0.8);
+	}
+	100% {
+		opacity:1;
+		transform:rotate(0) scale(1);		
+	}
+}

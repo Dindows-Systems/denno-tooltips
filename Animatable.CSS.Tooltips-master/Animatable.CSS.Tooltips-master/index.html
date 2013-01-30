@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Animatable CSS tooltips by Adam Whitcroft</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="animatable-tooltips.css">
+</head>
+<body class="wrapper">
+	<header>
+		<h1>Animatable CSS tooltips</h1>
+		<p>Following on from the <a href="http://adamwhitcroft.com/lab/css3-tooltips/">CSS tooltips</a> I posted a little while ago, I offer up another solution.</p>
+		<p>These differ from my original post both in markup and function. The original tooltips made use of the <code>:before</code> and <code>:after</code> pseudo-elements and while this is probably the most succinct method the major downfall is that CSS animations and transitions can not, at this time, be applied to pseudo-elements.</p>
+		<p>With only a minor change in the markup, these tooltips are completely animatable.</p>
+		<p>View them in action below or head over to the <a href="https://github.com/AdamWhitcroft/Animatable.CSS.Tooltips">GitHub repository</a>.</p>
+	</header>
+
+	<section>
+		<article>
+			<h2>Base markup</h2>
+			<p>The base markup for these tooltips is pretty straightforward. The content for your tooltip goes between the <code>span</code> tags.</p>
+			<pre><code>&lt;a href="#" class="tip-trigger"&gt;&lt;span&gt;Yay Tooltip!&lt;/span&gt;hover&lt;/a&gt;</code></pre>
+		</article>
+	</section>
+
+	<section>
+		<article>
+			<h2>Adding animations</h2>
+			<p>The interesting stuff starts when you add CSS3 animations into the mix. This is done by adding another class to the <code>anchor</code> tag, for example:</p>
+			<pre><code>&lt;a href="#" class="tip-trigger tipFade"&gt;&lt;span&gt;Yay Tooltip!&lt;/span&gt;hover&lt;/a&gt;</code></pre>			
+		<article>
+		<h3>Fading&hellip;</h3>
+		<article>
+			<p><code>class="tipFade"</code> - <a href="#" class="tip-trigger tipFade"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>		
+		<article>
+			<p><code>class="tipFadeDown"</code> - <a href="#" class="tip-trigger tipFadeDown"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>
+		<article>
+			<p><code>class="tipFadeUp"</code> - <a href="#" class="tip-trigger tipFadeUp"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>	
+		<article>
+			<p><code>class="tipFadeLeft"</code> - <a href="#" class="tip-trigger tipFadeLeft"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>	
+		<article>
+			<p><code>class="tipFadeRight"</code> - <a href="#" class="tip-trigger tipFadeRight"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>	
+		<h3>Bouncing&hellip;</h3>	
+		<article>
+			<p><code>class="tipBounceDown"</code> - <a href="#" class="tip-trigger tipBounceDown"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>
+		<article>
+			<p><code>class="tipBounceLeft"</code> - <a href="#" class="tip-trigger tipBounceLeft"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>	
+		<article>
+			<p><code>class="tipBounceRight"</code> - <a href="#" class="tip-trigger tipBounceRight"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>	
+		<article>
+			<p><code>class="tipBounceIn"</code> - <a href="#" class="tip-trigger tipBounceIn"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>	
+		<h3>Zooming&hellip;</h3>						
+		<article>
+			<p><code>class="tipZoomIn"</code> - <a href="#" class="tip-trigger tipZoomIn"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>	
+		<article>
+			<p><code>class="tipZoomOut"</code> - <a href="#" class="tip-trigger tipZoomOut"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>	
+		<h3>Spinning&hellip;</h3>
+		<article>
+			<p><code>class="tipSpinIn"</code> - <a href="#" class="tip-trigger tipSpinIn"><span>Yay Tooltip!</span>hover</a> over me.</p>
+		</article>							
+		<footer>
+			For a comprehensive CSS3 Animation Library you should check out <a href="http://daneden.me/animate/">animate.css</a> by <a href="http://daneden.me/">Dan Eden</a>. He's pretty much got it all covered there.
+		</footer>											
+	</section>
+
+	<section>
+		<h2>License</h2>
+		<p>
+		Licensed under <a href="http://licence.visualidiot.com/">&#9786; License</a>.
+		</p>		
+	</section>
+	
+	<footer>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-text="More Tooltips -" data-count="horizontal" data-via="adamwhitcroft">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>	
+	</footer>	
+</body>
+</html>

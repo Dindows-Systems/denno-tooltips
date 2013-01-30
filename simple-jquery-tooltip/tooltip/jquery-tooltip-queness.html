@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Simple JQuery Tooltips turtorial</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	//Select all anchor tag with rel set to tooltip
+	$('a[rel=tooltip]').mouseover(function(e) {
+		
+		//Grab the title attribute's value and assign it to a variable
+		var tip = $(this).attr('title');	
+		
+		//Remove the title attribute's to avoid the native tooltip from the browser
+		$(this).attr('title','');
+		
+		//Append the tooltip template and its value
+		$(this).append('<div id="tooltip"><div class="tipHeader"></div><div class="tipBody">' + tip + '</div><div class="tipFooter"></div></div>');		
+				
+		//Show the tooltip with faceIn effect
+		$('#tooltip').fadeIn('500');
+		$('#tooltip').fadeTo('10',0.9);
+		
+	}).mousemove(function(e) {
+	
+		//Keep changing the X and Y axis for the tooltip, thus, the tooltip move along with the mouse
+		$('#tooltip').css('top', e.pageY + 10 );
+		$('#tooltip').css('left', e.pageX + 20 );
+		
+	}).mouseout(function() {
+	
+		//Put back the title attribute's value
+		$(this).attr('title',$('.tipBody').html());
+	
+		//Remove the appended tooltip template
+		$(this).children('div#tooltip').remove();
+		
+	});
+
+});
+
+</script>
+
+<style>
+body {font-family:arial;font-size:12px;text-align:center;}
+div#paragraph {width:300px;margin:0 auto;text-align:left}
+a {color:#aaa;text-decoration:none;cursor:pointer;cursor:hand}
+a:hover {color:#000;text-decoration:none;}
+.clear {clear:both}
+
+
+/* Tooltip */
+
+#tooltip {
+	position:absolute;
+	z-index:9999;
+	color:#fff;
+	font-size:10px;
+	width:180px;
+	
+}
+
+#tooltip .tipHeader {
+	height:8px;
+	background:url(images/tipHeader.gif) no-repeat;
+}
+
+
+#tooltip .tipBody {
+	background-color:#000;
+	padding:5px 5px 5px 15px;
+}
+
+#tooltip .tipFooter {
+	height:8px;
+	background:url(images/tipFooter.gif) no-repeat;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="paragraph">
+<h2><a href="http://www.queness.com">Simple CSS + Javascript Tooltip with jQuery from Queness WebBlog</a></h2>
+A paragraph typically consists of a unifying main point, thought, or idea accompanied by supporting details. The non-fiction paragraph usually begins with the general and moves towards the more specific so as to advance an argument or point of view. Each <a rel="tooltip" title="A paragraph typically consists of a unifying main point, thought, or idea accompanied by <b>supporting details</b>">paragraph</a> builds on what came before and lays the ground for what comes next. Paragraphs generally range three to seven sentences all combined in a single paragraphed statement. In prose fiction <a rel="tooltip" title="<img src='images/queness.gif'/>">successive details</a>, for example; but it is just as common for the point of a prose paragraph to occur in the middle or the end. A paragraph can be as short as one word or run the length of multiple pages, and may consist of one or many <a rel="tooltip" title="It supports <font color='red'><b><i>HTML</i></b></font> as well!">sentences</a>. When dialogue is being quoted in fiction, a new paragraph is used each time the person being quoted changed.
+
+<br/><br/><br/>
+<div style="font-size:10px;color:#ccc">Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 3.0 License.</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>Comments for Confluence</title>
+	<atom:link href="http://www.confluenceindia.co.in/?feed=comments-rss2" rel="self" type="application/rss+xml" />
+	<link>http://www.confluenceindia.co.in</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Jul 2011 22:03:42 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.2</generator>
+	<item>
+		<title>Comment on Page With Comments by admin</title>
+		<link>http://www.confluenceindia.co.in/?page_id=31#comment-4</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Wed, 06 Jul 2011 22:03:42 +0000</pubDate>
+		<guid isPermaLink="false">http://itis.parkerandkent.com/itis/?page_id=31#comment-4</guid>
+		<description>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</description>
+		<content:encoded><![CDATA[<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Page With Comments by Sam</title>
+		<link>http://www.confluenceindia.co.in/?page_id=31#comment-3</link>
+		<dc:creator>Sam</dc:creator>
+		<pubDate>Wed, 06 Jul 2011 22:01:04 +0000</pubDate>
+		<guid isPermaLink="false">http://itis.parkerandkent.com/itis/?page_id=31#comment-3</guid>
+		<description>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut</description>
+		<content:encoded><![CDATA[<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Page With Comments by admin</title>
+		<link>http://www.confluenceindia.co.in/?page_id=31#comment-2</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Wed, 06 Jul 2011 21:56:53 +0000</pubDate>
+		<guid isPermaLink="false">http://itis.parkerandkent.com/itis/?page_id=31#comment-2</guid>
+		<description>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis, nihil imperdiet doming id quod mazim placerat facer...</description>
+		<content:encoded><![CDATA[<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis, nihil imperdiet doming id quod mazim placerat facer&#8230;</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

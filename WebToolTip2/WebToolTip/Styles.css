@@ -1,0 +1,58 @@
+/* Default CSS Stylesheet for a new Web Application project */
+BODY
+{
+    BACKGROUND-COLOR: #90c382;
+    FONT-FAMILY: Verdana, Helvetica, sans-serif;
+    FONT-SIZE: .8em;
+    FONT-WEIGHT: normal;
+    LETTER-SPACING: normal;
+    TEXT-TRANSFORM: none;
+    WORD-SPACING: normal
+}
+
+
+
+.ActiveField
+{
+	background-color: lightyellow;
+	color: Black;
+	font-weight: bold;
+}
+
+.RequiredField
+{
+	background-color:  Wheat;
+	color:  Black;
+	font-weight: bold;
+}
+
+.FocusOnField
+{
+	background-color: Red;
+	color: Yellow;
+	font-weight: bold;
+}
+
+.ErrorInField
+{
+	background-color: Red;
+	color: Yellow;
+	font-weight: bold;
+}
+
+.MayRequired			
+{
+	background-color: rosybrown;
+	color: Yellow;
+	font-weight: bold;
+}
+
+.OptionalField
+{
+	background-color: lavender;
+	color: black;
+	font-weight: bold;
+}
+
+
+

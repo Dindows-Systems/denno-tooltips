@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>CSS Bubble Tooltips</title>
+<meta content="CSS Tooltips">
+
+<style type="text/css">
+body{font: .75em Arial,sans-serif; background: #FFFFFF; color: #333333}
+div#container{width: 500px; margin:0 auto}
+h1{ color: #F60; margin: 1em 0 0; letter-spacing: -2px; }
+p{margin: 0 0 1.7em; }
+
+/*---------- bubble tooltip -----------*/
+a.tt{
+    position:relative;
+    z-index:24;
+    color:#3CA3FF;
+	font-weight:bold;
+    text-decoration:none;
+}
+a.tt span{ display: none; }
+
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+a.tt:hover{ z-index:25; color: #aaaaff; background:;}
+a.tt:hover span.tooltip{
+    display:block;
+    position:absolute;
+    top:0px; left:0;
+	padding: 15px 0 0 0;
+	width:200px;
+	color: #993300;
+    text-align: center;
+	filter: alpha(opacity:90);
+	KHTMLOpacity: 0.90;
+	MozOpacity: 0.90;
+	opacity: 0.90;
+}
+a.tt:hover span.top{
+	display: block;
+	padding: 30px 8px 0;
+    background: url(bubble.gif) no-repeat top;
+}
+a.tt:hover span.middle{ /* different middle bg for stretch */
+	display: block;
+	padding: 0 8px; 
+	background: url(bubble_filler.gif) repeat bottom; 
+}
+a.tt:hover span.bottom{
+	display: block;
+	padding:3px 8px 10px;
+	color: #548912;
+    background: url(bubble.gif) no-repeat bottom;
+}
+</style>
+</head>
+
+<body>
+	<div id="container">
+		<h1>CSS Bubble Tooltips</h1>
+		<p>Avoid cross-browser javascript when you can use css to make tooltips with less code. Honestly you were going to use css to style your tooltips anyway right? Your probably already have most of this code in your css already too.  You can <a href="#" class="tt">hover over me<span class="tooltip"><span class="top"></span><span class="middle">This is my Bubble Tooltip with CSS</span><span class="bottom"></span></span></a> to see how well these bubble tooltips work.  Besides that if you have an advanced site in the first place you probably have enought javascript already.</p>
+		<p>This example will show you how well this tooltip stretches for long descriptions when you <a href="#" class="tt">hover here!<span class="tooltip"><span class="top"></span><span class="middle">WWOOWW!, <br />This really is a very long tooltip.  Normally they aren't this long but every once in a while you feel the urge to use a really long description to make sure you get your point across to everyone!  This could go on and on all of the way down the page and probably overflow onto the next website you visit!  No, seriously go check the next website you planned on visiting..but you have to be quick when you move the mouse off of this link.  I bet you can't do it fast enough ;)</span><span class="bottom"></span></span></a>.  Also with the IE hack for the :hover state, you can do this with elements besides anchors.</p>
+		<p>If you dont like how it allows you to hover over the tooltip also then you can adjust the padding and top to separate the tool tip from the link.</p>
+		<p><a href="http://trentrichardson.com/downloads/?dl=csstooltips.zip">Download Source</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Simple Tooltips w/ CSS &amp; jQuery | Tutorial by Soh Tanaka</title>
+<style type="text/css">
+body {
+	margin: 0; padding: 0;
+	font: normal 12px Verdana, Geneva, sans-serif;
+	line-height: 1.8em;
+	color: #333;
+}
+* {outline: none;}
+img {border: none;}
+h1 {
+	font: 4em normal Georgia, 'Times New Roman', Times, serif;
+	padding: 10px 0;
+	color: #aaa;
+	text-align: center;
+}
+h1 span { color: #666; }
+h1 small{
+	font: 0.3em normal Verdana, Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	letter-spacing: 0.65em;
+	display: block;
+	color: #666;
+}
+h1 a {text-decoration: none;}
+a {color: #d60000; text-decoration: none;}
+
+/*--Tooltip Styles--*/
+.tip {
+	color: #fff;
+	background:#1d1d1d;
+	display:none; /*--Hides by default--*/
+	padding:10px;
+	position:absolute;	z-index:1000;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.container {width: 960px; margin: 0 auto; overflow: hidden;}
+</style>
+
+</head>
+
+<body>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	//Tooltips
+	$(".tip_trigger").hover(function(){
+		tip = $(this).find('.tip');
+		tip.show(); //Show tooltip
+	}, function() {
+		tip.hide(); //Hide tooltip		  
+	}).mousemove(function(e) {
+		var mousex = e.pageX + 20; //Get X coodrinates
+		var mousey = e.pageY + 20; //Get Y coordinates
+		var tipWidth = tip.width(); //Find width of tooltip
+		var tipHeight = tip.height(); //Find height of tooltip
+		
+		//Distance of element from the right edge of viewport
+		var tipVisX = $(window).width() - (mousex + tipWidth);
+		//Distance of element from the bottom of viewport
+		var tipVisY = $(window).height() - (mousey + tipHeight);
+		  
+		if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+			mousex = e.pageX - tipWidth - 20;
+		} if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+			mousey = e.pageY - tipHeight - 20;
+		} 
+		tip.css({  top: mousey, left: mousex });
+	});
+});
+
+</script>
+<div class="container">
+	<h1><span>Simple Tooltips</span> w/ CSS &amp; jQuery <small>Tutorial by Soh Tanaka | <a href="http://www.sohtanaka.com/web-design/simple-tooltip-w-jquery-css/">Visit Tutorial</a></small></h1>
+    <a href="http://www.designbombs.com/design-firm/struck-axiom/" target="_blank" class="tip_trigger" style="float: left; margin: 5px 20px 20px 0; padding: 10px; border: 1px dashed #ddd;">
+        <img src="http://www.htmldrive.net/edit_media/2010/201006/20100628/slide_thumbs/img/4_s.gif" alt=""/>
+        <span class="tip"><img src="http://www.htmldrive.net/edit_media/2010/201006/20100628/slide_thumbs/img/4_b.jpg" height="250" alt="" /></span> 
+    </a>
+
+    <p>Ut dolus ullamcorper, gravis ad eu typicus. Similis nulla augue aliquam importunus eu, dolor erat letalis persto. Autem qui, vel patria elit refero si. Letalis augue accumsan vulputate aptent vel aptent iusto ullamcorper vero. delenit hos dolore occuro tation euismod eum quadrum si nulla saepius nutus wisi foras. Commodo <a class="tip_trigger" href="http://www.designbombs.com/design-firm/grandpeople/">Paulatim <span class="tip" style="width: 400px;"><img src="http://www.htmldrive.net/edit_media/2010/201008/20100826/bslide/images/pic_mont.jpg" style="float: left; margin-right: 20px;" alt="" />Welcome to Grandpeople. We specialize in graphic design, photography, illustration and creative direction. Feel free to have a look at our selected work for clients and collaborators from around the globe.</span></a></p>
+    
+    <p>Jumentum in, premo pertineo valde mara velit haero ulciscor abigo commodo vulputate volutpat. In typicus luptatum, nutus, ne letalis vel ventosus. Hendrerit <a class="tip_trigger" href="http://www.designbombs.com/design-firm/amaze-labs/">aliquam <span class="tip" style="width: 450px;"><img src="http://www.htmldrive.net/edit_media/2010/201008/20100826/bslide/images/pic_mgmt.jpg" style="float: left; margin-right: 20px;" alt="" />
+We build fresh websites and amazing community solutions. Amazee Labs at your service! Based on the modern open source framework Drupal we bring your brand to the online world. With competence, confidence and a dash of spice! </span></a> eros eum eu laoreet, minim, probo. Duis nibh in huic abico duis enim oppeto. </p>	
+    
+    <p>Jumentum in, premo pertineo valde mara velit haero ulciscor abigo commodo vulputate volutpat. In typicus luptatum, nutus, ne letalis vel ventosus. Hendrerit aliquam eros eum eu laoreet, minim, probo. Duis nibh in huic abico duis enim oppeto. <a href="#" class="tip_trigger">Your Link Key Word <span class="tip">This will show up in the tooltip</span></a></p>	
+    
+    
+
+</div>
+More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></body>
+</html>

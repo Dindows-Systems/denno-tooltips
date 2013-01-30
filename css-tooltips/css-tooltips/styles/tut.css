@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background: url(images/maintenance/bg.png) repeat-x #252C2E;}
+	
+	a{color:#FFE25F;}
+	
+	a:hover{color:#CFE25F;}
+	
+	img{border:none;}
+	
+	li.tip, li.tipClick {margin-right:30px; margin-left:30px; display:inline;}
+	
+	.tip > a, .tipClick > a{font-size:18px;}
+	
+	h2{color:#d2d2d2; text-align:center; font-size:36px; position:relative;}
+	
+	ul > h2{color:#999;}
+	
+	ul{margin: 0 auto;position: relative;text-align: center;top: 130px;width: 960px;}
+	
+	li.tip > a, li.tipClick > a{color:#CCC;}
+	
+	img.ref{margin:0 auto; display:block;}

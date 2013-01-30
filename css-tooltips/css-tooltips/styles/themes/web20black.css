@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Tooltip */
+
+.tip, .tipClick{ /* This is any element that has a tooltip attached too it */
+	position:relative !important;
+	display:inline-block;
+}
+
+.tip > .tooltipL,
+.tip > .tooltipB,
+.tip > .tooltipR,
+.tip > .tooltipT,
+.tipClick > .tooltipL,
+.tipClick > .tooltipB,
+.tipClick > .tooltipR,
+.tipClick > .tooltipT{ /* Used to hide the tooltip */
+	display:none;
+}
+
+/** IMPORTANT!  Use the tipClick class for clickable tooltips (mobile doesn't allow hovering) and the .tip class for hoverable tooltips **/
+
+.tip:hover > .tooltipL, 
+.tip:hover > .tooltipB,
+.tip:hover > .tooltipR,
+.tip:hover > .tooltipT, /* This shows the tooltip when an elements with the .tip class is hovered over */
+.tipClick > a:focus + .tooltipL, 
+.tipClick > a:focus + .tooltipB,
+.tipClick > a:focus + .tooltipR,
+.tipClick > a:focus + .tooltipT{ /* This shows the tooltip once an element with the .tipClick class is clicked */
+	display:block;
+}
+
+.tooltipL, .tooltipR, .tooltipB, .tooltipT{ /* Universal styling for each tooltip */
+	background: #aebcbf; /* old browsers */
+	background: -moz-linear-gradient(top, #aebcbf 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%); /* firefox */
+	background: linear-gradient(top, #aebcbf 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%); /* future browsers */
+	-pie-background: linear-gradient(top, #aebcbf 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%); /* pie for ie */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aebcbf), color-stop(50%,#6e7774), color-stop(51%,#0a0e0a), color-stop(100%,#0a0809)); /* webkit */
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border:solid #FFFFFF 2px;
+    padding: 5px;
+    position: absolute;
+	text-align:center;
+	color:#e7e7e7;
+	z-index:10;
+	width:200px;
+}
+
+.tooltipL:before, .tooltipR:before, .tooltipB:before, .tooltipT:before{ /* Universal stying for the tooltip arrow */
+  	display:block;
+  	content:"\00a0";
+	position:absolute;
+	height:0px;
+  	width:0px;
+	border-style: solid;
+  	border-width: 11px;
+}
+
+/*********** Left Tooltip **************/
+
+.tooltipL{ /* The styling on the tooltip */
+    left: -226px;
+    margin-top: -28px;
+	}
+	
+.tooltipL:before{  /* Creates the arrow for the tooltip */
+	border-color: transparent transparent transparent #6e7774;
+  	top:5px;
+  	right:-24px;
+}
+
+/************ Bottom Tooltip *************/
+
+.tooltipB{ /* The styling on the tooltip */
+    top: 30px;
+	left: -183px;
+	}
+	
+.tooltipB:before{  /* Creates the arrow for the tooltip */
+	border-color: transparent transparent #6e7774 transparent;
+  	right:5px;
+  	top:-24px;;
+}
+
+/*********** Right Tooltip ************/
+
+.tooltipR{ /* The styling on the tooltip */
+    right: -226px;
+    margin-top: -28px;
+	}
+	
+.tooltipR:before{  /* Creates the arrow for the tooltip */
+	border-color: transparent #6e7774 transparent transparent;
+  	top:5px;
+  	left:-24px;
+}
+
+/******* Top Tooltip **********/
+
+.tooltipT{ /* The styling on the tooltip */
+    bottom:26px;
+    left: -186px;
+	}
+	
+.tooltipT:before{  /* Creates the arrow for the tooltip */
+	border-color: #000000 transparent transparent transparent;
+  	right:5px;
+  	bottom:-24px;
+}

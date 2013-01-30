@@ -1,0 +1,4 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tooltipL, .tooltipB, .tooltipR, .tooltipT{behavior: url(../styles/csspie/PIE.htc);}

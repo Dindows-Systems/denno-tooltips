@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pure CSS3 Tooltips</title>
+<link type="image/x-icon" href="../fav.ico" rel="shortcut icon" /> 
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="tooltips.css" />
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+	DD_belatedPNG.fix('a, img, div, span, h1'); //EXAMPLE
+</script>
+<![endif]-->
+
+<meta name="description" content="Pure CSS3 Tooltips. No images. No Javascript. Only CSS3." /> 
+<meta name="keywords" content="tooltips,css3,css,tooltip,download,descarga,design" /> 
+ 
+	<meta property="og:title" content="Pure CSS3 Tooltips" /> 
+	<meta property="og:type" content="cause" /> 
+	<meta property="og:url" content="http://horaciobella.com/tooltips" /> 
+	<meta property="og:site_name" content="HoracioBella.com"/> 
+	<meta property="fb:admins" content="" />				
+	<meta property="og:description" content="Pure CSS3 Tooltips. No images. No Javascript. Only CSS3." /> 
+
+</head>
+
+<body>
+	<div id="content">
+		<div id="header"> <a target="_blank" href="tooltips.css"> <img src="images/download.png" alt="Download the CSS" /> </a>
+			<h1>Pure CSS3 Tooltips</h1>
+		</div>
+		
+		<div class="first">
+			<h2>examples <span>show me how it looks</span></h2>
+				<div class="w33">
+					<span><img class="thumb" src="images/picture.jpg" width="240" height="160" alt="" /><span class="tooltip"><span></span><img src="images/picture.jpg" alt="" /> <br />Picture by Tiltti (<a href="http://www.flickr.com/photos/tiltti/">http://www.flickr.com/photos/tiltti/</a>)</span></span>
+				</div>
+				<div class="w33">
+					<p><a href="#">Lorem ipsum<span class="tooltip"><span></span>Lorem ipsum dolor sit amet</span></a></p>
+				</div>
+				<div class="w33">
+					<p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="tooltip"><span></span>
+					Ut enim ad minim <em>veniam</em>, quis nostrud <br />
+					<strong>exercitation</strong> ullamco laboris nisi ut aliquip<br />
+					ex ea commodo consequat.  Duis aute irure <br />
+					dolor in <u>reprehenderit</u> in voluptate velit esse <br />
+					cillum dolore eu fugiat nulla pariatur.</span></a></p>
+				</div>
+			</div>
+			
+		<div class="first grey">
+			<h2>usage <span>the css and the html</span></h2>
+			<p>First add the .css</p>
+			<p><code>&lt;link rel="stylesheet" href="tooltips.css" type="text/css" media="screen" /&gt;</code></p>
+			<p>Use this HTML structure to create tooltips:</p>
+			<pre>&lt;a href="#"&gt;
+	Lorem ipsum <span>&mdash; the content of the link</span>
+	&lt;span class="tooltip"&gt; <span>&mdash; start of the tooltip</span>
+		&lt;span&gt;&lt;/span&gt; <span>&mdash; this is for the triangle, only cosmetic</span>
+		Lorem ipsum dolor sit amet <span>&mdash; the content of the tooltip</span>
+	&lt;/span&gt; <span>&mdash; end of the tooltip</span>
+&lt;/a&gt;
+			</pre>
+			<ul>
+				<li>Don't use block elements inside the tooltip. To do so, you have to change the span structure for divs.</li>
+				<li>Don't use span inside the tooltip since it's used for the triangle.  To do that, add a class to the span, or use another tag.</li>
+			</ul>	
+		</div>
+		
+		<div class="first">
+			<h2>browsers <span>and other things</span></h2>
+			
+			<h4 class="initial">General problems</h4>
+			<ul>
+				<li>The tooltip position is relative to the link, not the cursor</li>
+				<li>Some CSS properties, such as <code style="padding: 2px 4px">display:none</code>, cause problems with the transition</li>
+				<li>It's not possible to place the tooltip above the link in a dynamic way</li>
+			</ul>
+			
+			<h4>Webkit (Chrome & Safari)</h4>
+			<ul><li>Underline inheritance can't be reset</li></ul>
+			
+			<h4>Firefox</h4>
+			<ul><li>Transitions work since version 4</li></ul>
+			
+			<h4>Opera</h4>
+			<ul><li>No problems</li></ul>
+			
+			<h4>Internet Explorer</h4>
+			<ul><li>Everything works correctly from version 9</li></ul>
+		</div>
+		
+		<div class="first grey">
+			<h2>credits <span>the author</span></h2>
+			<p>These tooltips were made by Horacio Bella (<a href="http://horaciobella.com">horaciobella.com</a>) in the beautiful, creative space provided by Beew (<a href="http://holabeew.com">holabeew.com</a>) in Rosario, Argentina. They were released to use for free. You can follow me on Twitter (<a href="http://twitter.com/horaciobella">@horaciobella</a>) or contact me by any other mean listed on my site.</p> 
+			<p>Did you like these tooltips? Please <a target="_blank" href="http://www.twitter.com/home/?status=Pure+CSS3+tooltips+http://bit.ly/eZiW0K+by+@horaciobella">tweet this</a> :-)</p> 
+		</div>
+		
+	</div>
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-345446-13']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	
+</body>
+</html>
